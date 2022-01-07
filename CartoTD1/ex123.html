@@ -8,7 +8,7 @@
 </head>
 <body>
   <section id="ex2">
-    <h4>Exo 2 (activez la position pour afficher les informations) : </h4>
+    <u><h4>Exo 2 : Position de l'appareil (activez la position pour afficher les informations)</h4></u>
     <div class="function1">
       <h4>fonction getCurrentPosition()</h4>
       <ul>
@@ -20,15 +20,32 @@
       </ul>
     </div>
   </section>
+
+  <section id="ex3">
+    <u><h4>Exo 3 : Orientation de l'appareil : </h4></u>
+    <div class="function1">
+      <h4>Orientation</h4>
+      <ul>
+      </ul>
+    </div>
+    <div class="function2">
+      <h4>Accélération</h4>
+      <ul>
+      </ul>
+    </div>
+  </section>
+
 </body>
 </html>
 
 <script>
 let ex2 ;
+let ex3 ;
 
 $(document).ready(function() {
 
   ex2 = $('#ex2') ;
+  ex3 = $('#ex3') ;
 
   navigator.geolocation.getCurrentPosition(function(position) {
     var firstDiv = ex2.find('.function1') ;
@@ -52,5 +69,32 @@ $(document).ready(function() {
       "<li>Timestamp : " + position.timestamp + "</li>"
     ) ;
   });
+
+  if(window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(orientation) {
+      var firstDiv = ex3.find('.function1') ;
+      firstDiv.find('ul').empty() ;
+      firstDiv.find('ul').append(
+        "<li>X : " + orientation.alpha + "</li>",
+        "<li>Y : " + orientation.beta + "</li>",
+        "<li>Z : " + orientation.gamma + "</li>"
+      ) ;
+    });
+  }
+
+  if(window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', function(orientation) {
+      var secondDiv = ex3.find('.function2') ;
+      secondDiv.find('ul').empty() ;
+      secondDiv.find('ul').append(
+        "<li>Acceleration X : " + orientation.acceleration.x + "</li>",
+        "<li>Acceleration Y : " + orientation.acceleration.y + "</li>",
+        "<li>Acceleration Z : " + orientation.acceleration.z + "</li>",
+        "<li>Rotation X : " + orientation.rotationRate.alpha + "</li>",
+        "<li>Rotation Y : " + orientation.rotationRate.beta + "</li>",
+        "<li>Rotation Z : " + orientation.rotationRate.gamma + "</li>"
+      ) ;
+    });
+  }
 }) ;
 </script>
