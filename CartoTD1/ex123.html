@@ -55,7 +55,7 @@ $(document).ready(function() {
       "<li>Latitude : " + Math.round(position.coords.latitude) + "</li>",
       "<li>Precision : " + Math.round(position.coords.accuracy) + "</li>",
       "<li>Vitesse : " + Math.round(position.coords.speed) + "</li>",
-      "<li>Timestamp : " + Math.round(position.timestamp) + "</li>"
+      "<li>Timestamp : " + new Date(position.timestamp) + "</li>"
     ) ;
   });
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
       "<li>Latitude : " + Math.round(position.coords.latitude) + "</li>",
       "<li>Precision : " + Math.round(position.coords.accuracy) + "</li>",
       "<li>Vitesse : " + Math.round(position.coords.speed) + "</li>",
-      "<li>Timestamp : " + Math.round(position.timestamp) + "</li>"
+      "<li>Timestamp : " + new Date(position.timestamp) + "</li>"
     ) ;
   });
 
