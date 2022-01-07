@@ -51,11 +51,11 @@ $(document).ready(function() {
   navigator.geolocation.getCurrentPosition(function(position) {
     var firstDiv = ex2.find('.function1') ;
     firstDiv.find('ul').append(
-      "<li>Longitude : " + position.coords.longitude.toFixed(2) + "</li>",
-      "<li>Latitude : " + position.coords.latitude.toFixed(2) + "</li>",
-      "<li>Precision : " + position.coords.accuracy.toFixed(2) + "</li>",
-      "<li>Vitesse : " + position.coords.speed.toFixed(2) + "</li>",
-      "<li>Timestamp : " + position.timestamp.toFixed(2) + "</li>"
+      "<li>Longitude : " + Math.round(position.coords.longitude) + "</li>",
+      "<li>Latitude : " + Math.round(position.coords.latitude) + "</li>",
+      "<li>Precision : " + Math.round(position.coords.accuracy) + "</li>",
+      "<li>Vitesse : " + Math.round(position.coords.speed) + "</li>",
+      "<li>Timestamp : " + Math.round(position.timestamp) + "</li>"
     ) ;
   });
 
@@ -63,11 +63,11 @@ $(document).ready(function() {
     var secondDiv = ex2.find('.function2') ;
     secondDiv.find('ul').empty() ;
     secondDiv.find('ul').append(
-      '<li>Longitude : ' + position.coords.longitude.toFixed(2) + '</li>',
-      "<li>Latitude : " + position.coords.latitude.toFixed(2) + "</li>",
-      "<li>Precision : " + position.coords.accuracy.toFixed(2) + "</li>",
-      "<li>Vitesse : " + position.coords.speed.toFixed(2) + "</li>",
-      "<li>Timestamp : " + position.timestamp.toFixed(2) + "</li>"
+      '<li>Longitude : ' + Math.round(position.coords.longitude) + '</li>',
+      "<li>Latitude : " + Math.round(position.coords.latitude) + "</li>",
+      "<li>Precision : " + Math.round(position.coords.accuracy) + "</li>",
+      "<li>Vitesse : " + Math.round(position.coords.speed) + "</li>",
+      "<li>Timestamp : " + Math.round(position.timestamp) + "</li>"
     ) ;
   });
 
@@ -76,9 +76,9 @@ $(document).ready(function() {
       var firstDiv = ex3.find('.function1') ;
       firstDiv.find('ul').empty() ;
       firstDiv.find('ul').append(
-        "<li>X : " + orientation.alpha.toFixed(2) + "</li>",
-        "<li>Y : " + orientation.beta.toFixed(2) + "</li>",
-        "<li>Z : " + orientation.gamma.toFixed(2) + "</li>"
+        "<li>X : " + Math.round(orientation.alpha) + "</li>",
+        "<li>Y : " + Math.round(orientation.beta) + "</li>",
+        "<li>Z : " + Math.round(orientation.gamma) + "</li>"
       ) ;
     });
   }
@@ -88,12 +88,12 @@ $(document).ready(function() {
       var secondDiv = ex3.find('.function2') ;
       secondDiv.find('ul').empty() ;
       secondDiv.find('ul').append(
-        "<li>Acceleration X : " + orientation.acceleration.x.toFixed(2) + "</li>",
-        "<li>Acceleration Y : " + orientation.acceleration.y.toFixed(2) + "</li>",
-        "<li>Acceleration Z : " + orientation.acceleration.z.toFixed(2) + "</li>",
-        "<li>Rotation X : " + orientation.rotationRate.alpha.toFixed(2) + "</li>",
-        "<li>Rotation Y : " + orientation.rotationRate.beta.toFixed(2) + "</li>",
-        "<li>Rotation Z : " + orientation.rotationRate.gamma.toFixed(2) + "</li>"
+        "<li>Acceleration X : " + Math.round(orientation.acceleration.x) + "</li>",
+        "<li>Acceleration Y : " + Math.round(orientation.acceleration.y) + "</li>",
+        "<li>Acceleration Z : " + Math.round(orientation.acceleration.z) + "</li>",
+        "<li>Rotation X : " + Math.round(orientation.rotationRate.alpha) + "</li>",
+        "<li>Rotation Y : " + Math.round(orientation.rotationRate.beta) + "</li>",
+        "<li>Rotation Z : " + Math.round(orientation.rotationRate.gamma) + "</li>"
       ) ;
     });
   }
