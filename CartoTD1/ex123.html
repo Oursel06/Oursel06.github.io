@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" http-equiv="refresh" content="1" >
   <title>TP1 Carto</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./tp1.js"></script>
 </head>
 <body>
-  <section id="exercice2">
-    <h4>Exo 2 : </h4>
+  <section id="ex2">
+    <h4>Exo 2 (activez la position pour afficher les informations) : </h4>
     <div class="function1">
       <h4>fonction getCurrentPosition()</h4>
       <ul>
@@ -24,36 +24,14 @@
 </html>
 
 <script>
-  var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
-
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log('Votre position actuelle est :');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude : ${crd.longitude}`);
-  console.log(`La précision est de ${crd.accuracy} mètres.`);
-}
-
-function error(err) {
-  console.warn(`ERREUR (${err.code}): ${err.message}`);
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options);
-
-
-let exercice2 ;
+let ex2 ;
 
 $(document).ready(function() {
 
-  exercice2 = $('#exercice2') ;
+  ex2 = $('#ex2') ;
 
   navigator.geolocation.getCurrentPosition(function(position) {
-    var firstDiv = exercice2.find('.function1') ;
+    var firstDiv = ex2.find('.function1') ;
     firstDiv.find('ul').append(
       "<li>Longitude : " + position.coords.longitude + "</li>",
       "<li>Latitude : " + position.coords.latitude + "</li>",
@@ -64,7 +42,7 @@ $(document).ready(function() {
   });
 
   navigator.geolocation.watchPosition(function(position) {
-    var secondDiv = exercice2.find('.function2') ;
+    var secondDiv = ex2.find('.function2') ;
     secondDiv.find('ul').empty() ;
     secondDiv.find('ul').append(
       '<li>Longitude : ' + position.coords.longitude + '</li>',
