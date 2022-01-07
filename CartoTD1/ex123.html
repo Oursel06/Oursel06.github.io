@@ -10,12 +10,12 @@
   <section id="ex2">
     <u><h3>Exo 2 : Position de l'appareil (activez la position pour afficher les informations)</h3></u>
     <div class="function1">
-      <h3>fonction getCurrentPosition()</h3>
+      <h3>Avec fonction getCurrentPosition()</h3>
       <ul>
       </ul>
     </div>
     <div class="function2">
-      <h3>fonction watchPosition()</h3>
+      <h3>Avec fonction watchPosition()</h3>
       <ul>
       </ul>
     </div>
@@ -35,7 +35,7 @@
     </div>
   </section>
   <br />
-  <section id="exercice4">
+  <section id="ex4">
     <u><h3>Exo 4 : Touch events : </h3></u>
     <div>
       <ul>
@@ -48,11 +48,13 @@
 <script>
 let ex2 ;
 let ex3 ;
+let ex4 ;
 
 $(document).ready(function() {
 
   ex2 = $('#ex2') ;
   ex3 = $('#ex3') ;
+  ex4 = $('#ex4') ;
 
 
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -104,5 +106,22 @@ $(document).ready(function() {
       ) ;
     });
   }
+
+  window.addEventListener("touchstart", handleStart, false);
+  window.addEventListener("touchend", handleEnd, false);
+  window.addEventListener("touchcancel", handleCancel, false);
+  window.addEventListener("touchleave", handleLeave, false);
+  window.addEventListener("touchmove", handleMove, false);
+
+  function touchEventHandler(event) {
+  var firstDiv = ex4.find('div') ;
+  firstDiv.find('ul').empty() ;
+  firstDiv.find('ul').append(
+    "<li>Position X : " + event.changedTouches[0].screenX + "</li>",
+    "<li>Position X : " + event.changedTouches[0].screenY + "</li>",
+    "<li>Type event : " + event.type + "</li>"
+  ) ;
+}
+
 }) ;
 </script>
