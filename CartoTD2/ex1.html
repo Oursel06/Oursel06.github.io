@@ -29,7 +29,13 @@
       maxZoom: 15
     }).addTo(maps);
     L.marker([position.coords.latitude, position.coords.longitude]).addTo(maps)
-    .bindPopup('Vous êtes ici !')
+    .bindPopup('Vous êtes ici')
     .openPopup();
+    var circle = L.circle([43.70, 7.26], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 400
+}).addTo(maps);
   });
 </script>
