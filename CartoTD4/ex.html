@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/three.js"></script>
+    <script src="./src/threeorb.js"></script>
+    <script src="./src/threegltf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>TD4 exo1</title>
+</head>
+
+<body>
+    <h2>Carto & Three.js </h2>
+    <canvas id="earthCanvas"></canvas>
+</body>
+<script type="text/javascript">
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(22, 1, 0.2, 900);
+    camera.position.z = 7;
+    const loader = new THREE.TextureLoader();
+    loader.load('https://image.freepik.com/photos-gratuite/ciel-etoile_1048-11828.jpg', function (texture) {
+        scene.background = texture;
+    });
+    const renderer = new THREE.WebGLRenderer({ canvas: earthCanvas });
+    renderer.setSize(500, 500);
+
+    const light = new THREE.AmbientLight(0xffffff);
+    scene.add(light);
+
+    const geometry = new THREE.SphereGeometry(1, 32, 32);
+    const texture = new THREE.TextureLoader().load('./texture/earth.jpg');
+    const materialTex = new THREE.MeshBasicMaterial({ map: texture });
+    const earth = new THREE.Mesh(geometry, materialTex);
+
+    scene.add(earth);
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    const animate = function () {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    };
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+        const cartesianPos = convert(position.coords.latitude, position.coords.longitude);
+        const gltfLoader = new THREE.GLTFLoader();
+        gltfLoader.load('./models/Duck.gltf', function (gltf) {
+            console.log(gltf);
+            var duck = gltf.scene;
+            duck.scale.set(0.04, 0.04, 0.04);
+            duck.position.set(cartesianPos.x, cartesianPos.y, cartesianPos.z);
+            scene.add(duck);
+        },
+        );
+        // const geometryMP = new THREE.SphereGeometry(0.01, 32, 32);
+        // const materialMP = new THREE.MeshBasicMaterial({ color: 0xf00000 });
+        // const myPosition = new THREE.Mesh(geometryMP, materialMP);
+
+        // myPosition.position.x = cartesianPos.x;
+        // myPosition.position.y = cartesianPos.y;
+        // myPosition.position.z = cartesianPos.z;
+
+        // scene.add(myPosition);
+    });
+
+    var countries = new THREE.Group();
+$.get({
+  url: 'https://restcountries.com/v3.1/all',
+  success: function(data) {
+    data.forEach((item, i) => {
+      var cartesianPosCountry = convert(item['latlng'][0], item['latlng'][1]) ;
+      var geometryC = new THREE.SphereGeometry(0.01, 32, 32) ;
+      var textureC = new THREE.TextureLoader().load(item.flags.png);
+      var materialC = new THREE.MeshBasicMaterial({map: textureC}) ;
+      var posCountry = new THREE.Mesh(geometryC, materialC) ;
+
+      posCountry.position.x = cartesianPosCountry.x ;
+      posCountry.position.y = cartesianPosCountry.y ;
+      posCountry.position.z = cartesianPosCountry.z ;
+
+      countries.add(posCountry) ;
+    });
+  }
+}) ;
+scene.add(countries) ;
+
+    animate();
+
+    function convert(lat, lon) {
+        lon = -lon * Math.PI / 180.0;
+        lat = lat * Math.PI / 180.0;
+        return new THREE.Vector3(
+            Math.cos(lat) * Math.cos(lon),
+            Math.sin(lat),
+            Math.cos(lat) * Math.sin(lon)
+        );
+    }
+</script>
+
+</html>
