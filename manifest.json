@@ -5,6 +5,11 @@
             "src": "./img/logopwa.png",
             "type": "image/png",
             "sizes": "192x192"
+        },
+        {
+            "src": "./img/logopwa512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": "index.html",
