@@ -1,0 +1,12 @@
+{
+    "name": "premiereapp",
+    "icons":[
+        {
+            "src": "./img/logopwa.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone"
+}
