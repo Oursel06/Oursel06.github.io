@@ -11,4 +11,9 @@ $(document).ready(function(){
     $('.up').click(function(){
         $('html').animate({scrollTop: 0});
     });
+
+    $('.menu-btn').click(function(){
+       $('.nav .ul').toggleClass("active");
+       $('.menu-btn i').toggleClass("bi bi-list bi bi-x");
+    });
 })

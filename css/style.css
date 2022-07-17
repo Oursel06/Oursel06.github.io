@@ -40,6 +40,7 @@ nav {
 	color: var(--secondary-color);
 	font-weight: bolder;
 	font-size: 40px;
+	padding-left: 8%;
 }
 
 nav ul li {
@@ -64,6 +65,7 @@ nav ul li a:hover {
 	color: var(--main-color);
 	font-size: 40px;
 	display: none;
+	cursor: pointer;
 }
 
 .btn {
@@ -199,16 +201,49 @@ nav ul li a:hover {
 /* Responsive */
 
 @media (max-width: 1430px){
-	nav{
+	.nav{
 		position: fixed;
+		opacity: 1;
+	}
+
+	.nav .ul{
+		position: fixed;
+		background: #191919;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		text-align: left;
+		padding-top: 80px;
+		transition: all 0.2s ease;
 	}
 	
-	nav ul li {
-		display: none;
+	.nav .ul.active{
+		left: 0px;
+	}
+
+	.nav .ul li {
+		display: block;
+		margin-bottom: 60px;
+		font-size: 25px;
+	}
+	.nav .ul li a{
+		display: inline-block;
+	}
+
+	.btn {
+		text-decoration: none;
+		background: none;
+		border: none;
+		padding: 0;
+		border-radius: 0px;
+		transition: none;
+		font-size: 25px;
 	}
 	
 	.menu-btn{
 		display: block;
+		z-index: 99;
 	}
 
 	.description p {
