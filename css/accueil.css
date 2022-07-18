@@ -33,17 +33,13 @@ nav {
 	z-index: 1;
 	opacity: 0.9;
 }
-
 .logo {
-	color: var(--main-color);
-	font-size: 30px;
-	letter-spacing: 3px;
-	color: var(--secondary-color);
-	font-weight: bolder;
-	font-size: 40px;
 	padding-left: 8%;
 }
-
+.logo .imglogo{
+	width: 90px;
+	height: 85px;
+}
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
@@ -190,6 +186,7 @@ nav ul li a:hover {
 
 	.nav .ul{
 		position: fixed;
+		opacity: 0.9;
 		background: #191919;
 		height: 100vh;
 		width: 100%;
@@ -308,43 +305,37 @@ nav ul li a:hover {
 	}
 }
 
-@media (max-width: 450px){
+@media (max-width: 470px){
 	.home {
 		height: 99vh;
+	}
+	.logo .imglogo {
+		width: 65px;
+		height: 60px;
 	}
 	.content {
 		top: 20%;
 		animation: none;
 		display: block;
 	}
-	
 	.content h2 {
 		font-size: 35px;
 		margin: 10px;
 	}
-	
 	.content h4 {
 		font-size: 20px;
 		margin: 10px;
 	}
-	.logo {
-		font-size: 20px;
-		letter-spacing: 2px;
-		font-weight: bolder;
-	}
-
 	.reseaux {
 		animation: none;
 		top: 40%;
 	}
-
 	.logoreseau {
 		margin: 3px;
 		justify-content: space-between;
 		width: 60px;
 		height: 60px;
-	}
-	
+	}	
 	.about img {
 		height: auto;
 		width: 300px;
