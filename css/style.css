@@ -1,0 +1,307 @@
+/******************************************************** VARIABLES GLOBALES ********************************************************/
+:root {
+	--main-text: white;
+	--secondary-text: royalblue;
+	--background-home: #191919;
+	--background-profil: black;
+	--background-nav: var(--background-profil);
+	--fondue: 0.5s;
+	--main-butplus: dimgray;
+	--second-butplus: white;
+}
+
+#theme {
+	cursor: pointer;
+	transition: var(--fondue);
+	color: var(--main-text);
+}
+
+/********************************************************* CONFIG GÉNÉRALE **********************************************************/
+html {
+	padding: 0;
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: auto;
+	margin: auto;
+}
+
+/********************************************************** PAGE D'ACCUEIL ***********************************************************/
+.accueil {
+	height: 100vh;
+	width: 100%;
+	overflow-y: hidden;
+}
+
+.accueil_video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.button_decouvrir {
+	position: absolute;
+	background: transparent;
+	padding: 5px;
+	margin: auto;
+	right: 0;
+	bottom: 10%;
+	left: 0;
+	width: 300px;
+	display: inline-block;
+	-webkit-transform: translate(0%, 0%);
+	transform: translate(0%, 0%);
+	font-weight: 100;
+	overflow: hidden;
+	color: var(--second-butplus);
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.button_decouvrir span {
+	position: absolute;
+}
+
+.button_decouvrir span:nth-child(1) {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to left, var(--main-butplus), var(--second-butplus));
+	animation: 2s animateTop infinite;
+}
+
+@keyframes animateTop {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}
+
+.button_decouvrir span:nth-child(2) {
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 2px;
+	background: linear-gradient(to top, var(--main-butplus), var(--second-butplus));
+	animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+	0% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+
+	100% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+}
+
+.button_decouvrir span:nth-child(3) {
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, var(--main-butplus), var(--second-butplus));
+	animation: 2s animateBottom infinite;
+}
+
+@keyframes animateBottom {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+}
+
+.button_decouvrir span:nth-child(4) {
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 2px;
+	background: linear-gradient(to bottom, var(--main-butplus), var(--second-butplus));
+	animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+}
+
+.accueil_content {
+	animation: movetoleft 1s forwards;
+	position: absolute;
+	display: inline-block;
+	color: var(--main-text);
+	margin: auto;
+	bottom: 50%;
+	left: 0;
+	width: auto;
+}
+
+.accueil_content h2 {
+	font-size: 65px;
+	margin: 1px;
+}
+
+.accueil_content h4 {
+	font-size: 28px;
+	margin: 1px;
+}
+
+/************************************************************** MENU **************************************************************/
+nav {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	font-size: 20px;
+	transition: var(--fondue);
+	background-color: var(--background-nav);
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 8%;
+	padding-right: 8%;
+	z-index: 1;
+	opacity: 0.9;
+}
+
+.logo {
+	padding-left: 8%;
+}
+
+.logo .imglogo {
+	width: 90px;
+	height: 85px;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--main-text);
+	font-weight: bold;
+	transition: color var(--fondue) ease;
+}
+
+nav ul li a:hover {
+	transition: var(--fondue);
+	color: var(--secondary-text);
+	cursor: pointer;
+}
+
+.menu-btn {
+	transition: var(--fondue);
+	color: var(--main-text);
+	font-size: 40px;
+	display: none;
+	cursor: pointer;
+}
+
+/* .btn {
+	transition: var(--fondue);
+	background-color: var(--secondary-text);
+	color: var(--main-text);
+	text-decoration: none;
+	border: 2px solid transparent;
+	padding: 10px;
+	font-weight: bold;
+	border-radius: 30px;
+	transition: transform .1s;
+}
+
+.btn:hover {
+	transform: scale(1.1);
+	transition: var(--fondue);
+	color: var(--main-text);
+	background-color: var(--secondary-text);
+	border: solid 2px var(--main-text);
+}
+
+.btn:visited {
+	color: var(--main-text);
+	background-color: var(--secondary-text);
+} */
+
+/*********************************************************** RESPONSIVE ***********************************************************/
+@media (max-width: 1030px) {
+	.nav {
+		position: fixed;
+		opacity: 1;
+	}
+
+	.nav .ul {
+		position: fixed;
+		background: var(--background-home);
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		text-align: left;
+		padding-top: 80px;
+		transition: all 0.2s ease;
+	}
+
+	.nav .ul.active {
+		left: 0px;
+	}
+
+	.nav .ul li {
+		display: block;
+		margin-bottom: 80px;
+		font-size: 25px;
+	}
+
+	.nav .ul li a {
+		display: inline-block;
+	}
+
+	.menu-btn {
+		display: block;
+		z-index: 99;
+	}
+}
+
+/* Animations */
+@keyframes movetoleft {
+	0% {
+		transform: translate(-150%)
+	}
+
+	50% {
+		transform: translate(25%)
+	}
+
+	100% {
+		transform: translate(19%)
+	}
+}
