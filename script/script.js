@@ -40,8 +40,15 @@ $(document).ready(function () {
 
     $('#accueil_decouvrir').click(function () {
         $('#accueil').hide(100);
-        // let s = document.getElementById("portfolio");
-        // s.style.display = "block";
         $(".portfolio").show(500);
+    })
+
+    let typing = new Typed(".accueil_nom", {
+        strings: ["Alexandre", "<span style='letter-spacing: 10px;'>OURSEL</span>"],
+        backSpeed: 20,
+        typeSpeed: 70,
+        loop: true,
+        startDelay: 200,
+        showCursor: false
     })
 })

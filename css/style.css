@@ -1,12 +1,12 @@
 /******************************************************** VARIABLES GLOBALES ********************************************************/
 :root {
 	--main-text: white;
-	--secondary-text: royalblue;
+	--secondary-text: darkblue;
 	--background-home: #191919;
 	--background-profil: black;
 	--background-nav: var(--background-profil);
 	--fondue: 0.5s;
-	--main-butplus: dimgray;
+	--main-butplus: gray;
 	--second-butplus: white;
 }
 
@@ -48,7 +48,6 @@ body {
 .button_decouvrir {
 	position: absolute;
 	background: transparent;
-	padding: 5px;
 	margin: auto;
 	right: 0;
 	bottom: 10%;
@@ -64,6 +63,17 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
+	transition: var(--fondue);
+}
+
+
+.button_decouvrir:hover {
+	transform: scale(1.2);
+	color: var(--main-text);
+	border-radius: 2px;
+	box-shadow: var(--secondary-text) 1px 1px 20px 1px;
+	animation: none;
+	text-shadow: 1px 1px 2px var(--secondary-text), 0 0 1em var(--secondary-text), 0 0 0.2em var(--secondary-text);
 }
 
 .button_decouvrir span {
@@ -155,7 +165,7 @@ body {
 }
 
 .accueil_content {
-	animation: movetoleft 1s forwards;
+	animation: movetoleft 2s forwards;
 	position: absolute;
 	display: inline-block;
 	color: var(--main-text);
@@ -166,12 +176,12 @@ body {
 }
 
 .accueil_content h2 {
-	font-size: 65px;
+	font-size: 85px;
 	margin: 1px;
 }
 
-.accueil_content h4 {
-	font-size: 28px;
+.accueil_content p {
+	font-size: 38px;
 	margin: 1px;
 }
 
