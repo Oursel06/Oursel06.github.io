@@ -29,13 +29,13 @@ body {
 	height: 100%;
 	padding: auto;
 	margin: auto;
+	overflow: hidden;
 }
 
 /********************************************************** PAGE D'ACCUEIL ***********************************************************/
 .accueil {
 	height: 100vh;
 	width: 100%;
-	overflow-y: hidden;
 }
 
 .accueil_video {
@@ -50,7 +50,7 @@ body {
 	background: transparent;
 	margin: auto;
 	right: 0;
-	bottom: 10%;
+	bottom: 20%;
 	left: 0;
 	width: 300px;
 	display: inline-block;
@@ -59,7 +59,7 @@ body {
 	font-weight: 100;
 	overflow: hidden;
 	color: var(--second-butplus);
-	font-size: 40px;
+	font-size: 50px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -89,18 +89,6 @@ body {
 	animation: 2s animateTop infinite;
 }
 
-@keyframes animateTop {
-	0% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-
-	100% {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-	}
-}
-
 .button_decouvrir span:nth-child(2) {
 	top: 0px;
 	right: 0px;
@@ -108,18 +96,6 @@ body {
 	width: 2px;
 	background: linear-gradient(to top, var(--main-butplus), var(--second-butplus));
 	animation: 2s animateRight linear -1s infinite;
-}
-
-@keyframes animateRight {
-	0% {
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-
-	100% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
 }
 
 .button_decouvrir span:nth-child(3) {
@@ -131,18 +107,6 @@ body {
 	animation: 2s animateBottom infinite;
 }
 
-@keyframes animateBottom {
-	0% {
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-	}
-
-	100% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-}
-
 .button_decouvrir span:nth-child(4) {
 	top: 0px;
 	left: 0px;
@@ -152,18 +116,6 @@ body {
 	animation: 2s animateLeft linear -1s infinite;
 }
 
-@keyframes animateLeft {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-
-	100% {
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-}
-
 .accueil_content {
 	animation: movetoleft 2s forwards;
 	position: absolute;
@@ -171,12 +123,14 @@ body {
 	color: var(--main-text);
 	margin: auto;
 	bottom: 50%;
+	right: 0;
+	text-align: center;
 	left: 0;
 	width: auto;
 }
 
 .accueil_content h2 {
-	font-size: 85px;
+	font-size: 55px;
 	margin: 1px;
 }
 
@@ -262,6 +216,74 @@ nav ul li a:hover {
 	background-color: var(--secondary-text);
 } */
 
+
+/************************************************************ PROFIL ************************************************************/
+
+.profil {
+	width: 100%;
+	padding: 100px;
+	transition: var(--fondue);
+	background-color: var(--background-profil);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.profil img {
+	height: auto;
+	width: 400px;
+	/* border: 1px solid var(--secondary-text); */
+}
+
+.description {
+	width: 50%;
+	transition: var(--fondue);
+	color: var(--main-text);
+}
+
+.description h2 {
+	transition: var(--fondue);
+	padding: 50px;
+	color: var(--secondary-text);
+	font-size: 45px;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.description p {
+	transition: var(--fondue);
+	color: var(--main-text);
+	text-align: justify;
+	line-height: 30px;
+	font-size: 24px;
+	margin-bottom: 45px;
+}
+
+.up {
+	transition: var(--fondue);
+	position: fixed;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 30px;
+	align-items: center;
+	background: var(--secondary-text);
+	color: var(--main-text);
+	bottom: -40px;
+	right: 5px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.up.show {
+	opacity: 1;
+	pointer-events: auto;
+	bottom: 5px;
+}
+
 /*********************************************************** RESPONSIVE ***********************************************************/
 @media (max-width: 1030px) {
 	.nav {
@@ -301,17 +323,65 @@ nav ul li a:hover {
 	}
 }
 
-/* Animations */
-@keyframes movetoleft {
+/*********************************************************** ANIMATIONS ***********************************************************/
+@keyframes animateTop {
 	0% {
-		transform: translate(-150%)
-	}
-
-	50% {
-		transform: translate(25%)
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
 	}
 
 	100% {
-		transform: translate(19%)
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes animateRight {
+	0% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+
+	100% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes animateBottom {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+}
+
+@keyframes animateLeft {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+	}
+}
+
+@keyframes movetoleft {
+	0% {
+		transform: translate(-100%)
+	}
+
+	50% {
+		transform: translate(1%)
+	}
+
+	100% {
+		transform: translate(0%)
 	}
 }

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('html').animate({ scrollTop: 0 }, 'fast');
     $(window).scroll(function () {
         if (this.scrollY > 500) {
             $('.up').addClass("show");
@@ -41,14 +42,31 @@ $(document).ready(function () {
     $('#accueil_decouvrir').click(function () {
         $('#accueil').hide(100);
         $(".portfolio").show(500);
+        var lebody = document.getElementById("body");
+        lebody.style.overflow = "auto";
+        // documentElement("body").addClass('page');
+        // documentElement("body").addClass('page');
     })
 
-    let typing = new Typed(".accueil_nom", {
-        strings: ["Alexandre", "<span style='letter-spacing: 10px;'>OURSEL</span>"],
+    let nom = new Typed(".accueil_nom", {
+        strings: ["Alexandre OURSEL"],
         backSpeed: 20,
         typeSpeed: 70,
-        loop: true,
+        loop: false,
         startDelay: 200,
         showCursor: false
     })
+    let metier = new Typed(".accueil_metier", {
+        strings: ["front ", "back"],
+        backSpeed: 20,
+        typeSpeed: 70,
+        loop: true,
+        startDelay: 300,
+        showCursor: false
+    });
+    // var now = new Date();
+    // if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
+    // else {
+    //     document.getElementById("accueil_heure").innerHTML = "Bonsoir"
+    // }
 })
