@@ -45,7 +45,7 @@ body {
 	z-index: -1;
 }
 
-.accueil_msg{
+.accueil_notif{
 	position: absolute;
 	color: var(--main-text);
 	top: 10%;
@@ -56,7 +56,7 @@ body {
 	height: auto;
 }
 
-.accueil_msg_text{
+.accueil_notif_text{
 	animation: moveaccueil_msg 15s forwards;
 	animation-timing-function: linear;
 	margin: 0;
@@ -408,7 +408,7 @@ nav ul li a:hover {
 
 @keyframes moveaccueil_msg {
 	0% {
-		transform: translate(90%)
+		transform: translate(95%)
 	}
 
 	100% {

@@ -62,7 +62,7 @@ $(document).ready(function () {
         startDelay: 300,
         showCursor: false
     });
-        $(".accueil_msg").show(500);
+        $(".accueil_notif").show(500);
     window.setTimeout(masquernotification, 12000);
     // var now = new Date();
     // if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
@@ -71,5 +71,5 @@ $(document).ready(function () {
     // }
 })
 function masquernotification(){
-   $(".accueil_msg").hide(500);
+   $(".accueil_notif").hide(500);
 }
