@@ -49,7 +49,8 @@ body {
 	position: absolute;
 	color: var(--main-text);
 	top: 10%;
-	background-color: rgba(50, 50, 200, 0.5);
+	background-color: rgba(50, 50, 200, 0.3);
+	box-shadow: rgba(50, 50, 200) 1px 1px 20px 1px;
 	border-radius: 10px;
 	align-items: center;
 	width: 100%;
@@ -408,7 +409,7 @@ nav ul li a:hover {
 
 @keyframes moveaccueil_msg {
 	0% {
-		transform: translate(95%)
+		transform: translate(110%)
 	}
 
 	100% {
