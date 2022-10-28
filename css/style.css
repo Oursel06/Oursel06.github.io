@@ -45,6 +45,48 @@ body {
 	z-index: -1;
 }
 
+.accueil_msg{
+	position: absolute;
+	color: var(--main-text);
+	top: 10%;
+	background-color: rgba(50, 50, 200, 0.5);
+	border-radius: 10px;
+	align-items: center;
+	width: 100%;
+	height: auto;
+}
+
+.accueil_msg_text{
+	animation: moveaccueil_msg 15s forwards;
+	animation-timing-function: linear;
+	margin: 0;
+	color: var(--main-text);
+	font-size: 20px;
+	top: 10%;
+}
+.accueil_content {
+	animation: movetoleft 2s forwards;
+	position: absolute;
+	display: inline-block;
+	color: var(--main-text);
+	margin: auto;
+	bottom: 50%;
+	right: 0;
+	text-align: center;
+	left: 0;
+	width: auto;
+}
+
+.accueil_content h2 {
+	font-size: 55px;
+	margin: 1px;
+}
+
+.accueil_content p {
+	font-size: 38px;
+	margin: 1px;
+}
+
 .button_decouvrir {
 	position: absolute;
 	background: transparent;
@@ -116,28 +158,6 @@ body {
 	animation: 2s animateLeft linear -1s infinite;
 }
 
-.accueil_content {
-	animation: movetoleft 2s forwards;
-	position: absolute;
-	display: inline-block;
-	color: var(--main-text);
-	margin: auto;
-	bottom: 50%;
-	right: 0;
-	text-align: center;
-	left: 0;
-	width: auto;
-}
-
-.accueil_content h2 {
-	font-size: 55px;
-	margin: 1px;
-}
-
-.accueil_content p {
-	font-size: 38px;
-	margin: 1px;
-}
 
 /************************************************************** MENU **************************************************************/
 nav {
@@ -383,5 +403,15 @@ nav ul li a:hover {
 
 	100% {
 		transform: translate(0%)
+	}
+}
+
+@keyframes moveaccueil_msg {
+	0% {
+		transform: translate(90%)
+	}
+
+	100% {
+		transform: translate(-110%)
 	}
 }

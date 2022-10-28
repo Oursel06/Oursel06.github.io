@@ -44,8 +44,6 @@ $(document).ready(function () {
         $(".portfolio").show(500);
         var lebody = document.getElementById("body");
         lebody.style.overflow = "auto";
-        // documentElement("body").addClass('page');
-        // documentElement("body").addClass('page');
     })
 
     let nom = new Typed(".accueil_nom", {
@@ -64,9 +62,14 @@ $(document).ready(function () {
         startDelay: 300,
         showCursor: false
     });
+        $(".accueil_msg").show(500);
+    window.setTimeout(masquernotification, 12000);
     // var now = new Date();
     // if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
     // else {
     //     document.getElementById("accueil_heure").innerHTML = "Bonsoir"
     // }
 })
+function masquernotification(){
+   $(".accueil_msg").hide(500);
+}
