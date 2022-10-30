@@ -15,12 +15,12 @@ $(document).ready(function () {
 
     $('.menu-btn').click(function () {
         $('.nav .ul').toggleClass("active");
-        $('.menu-btn i').toggleClass("bi-list bi-x");
+        $('.menu-btn i').toggleClass("fa-bars fa-times");
     });
 
     let toogle = 0
     $('#theme').click(function () {
-        $('#theme').toggleClass("bi-sun bi-moon").animate(1000);
+        $('#theme').toggleClass("fa-lightbulb fa-moon").animate(1000);
         if (toogle === 0) {
             // $(this).animate({ backgroundText: "black" }, 1000);
             document.documentElement.style.setProperty('--background-profil', 'aliceblue',);
@@ -32,7 +32,6 @@ $(document).ready(function () {
             document.documentElement.style.setProperty('--background-profil', 'black');
             document.documentElement.style.setProperty('--background-home', '#191919');
             document.documentElement.style.setProperty('--main-text', 'white');
-
             toogle--;
         }
     })
@@ -68,7 +67,29 @@ $(document).ready(function () {
     // else {
     //     document.getElementById("accueil_heure").innerHTML = "Bonsoir"
     // }
+
+    function masquernotification() {
+        $(".accueil_notif").hide(400);
+    }
+
+    $('#params').click(function () {
+        var x = document.getElementById("parametre");
+        if (x.style.display === "none") {
+            $(".parametre").show(100);
+        } else {
+            $(".parametre").hide(100);
+        }
+    })
+
+    $('#theme_rouge').click(function () {
+        document.documentElement.style.setProperty('--secondary-text', 'red');
+    })
+
+    $('#theme_vert').click(function () {
+        document.documentElement.style.setProperty('--secondary-text', 'lime');
+    })
+
+    $('#theme_bleu').click(function () {
+        document.documentElement.style.setProperty('--secondary-text', 'blue');
+    })
 })
-function masquernotification() {
-    $(".accueil_notif").hide(400);
-}
