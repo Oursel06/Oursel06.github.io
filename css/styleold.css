@@ -159,29 +159,7 @@ nav ul li a:hover {
 	border: 1px solid;
 }
 
-.description {
-	width: 50%;
-	transition: var(--fondue);
-	color: var(--main-color);
-}
 
-.description h2 {
-	transition: var(--fondue);
-	color: var(--secondary-color);
-	font-size: 45px;
-	text-align: center;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-}
-
-.description p {
-	transition: var(--fondue);
-	color: var(--main-color);
-	text-align: justify;
-	line-height: 40px;
-	font-size: 28px;
-	margin-bottom: 45px;
-}
 
 .up {
 	transition: var(--fondue);

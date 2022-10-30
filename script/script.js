@@ -26,14 +26,12 @@ $(document).ready(function () {
             document.documentElement.style.setProperty('--background-profil', 'aliceblue',);
             document.documentElement.style.setProperty('--background-home', 'white');
             document.documentElement.style.setProperty('--main-text', 'black');
-            document.documentElement.style.setProperty('--secondary-text', 'darksalmon');
             toogle++;
         }
         else {
             document.documentElement.style.setProperty('--background-profil', 'black');
             document.documentElement.style.setProperty('--background-home', '#191919');
             document.documentElement.style.setProperty('--main-text', 'white');
-            document.documentElement.style.setProperty('--secondary-text', 'royalblue');
 
             toogle--;
         }
@@ -44,6 +42,7 @@ $(document).ready(function () {
         $(".portfolio").show(500);
         var lebody = document.getElementById("body");
         lebody.style.overflow = "auto";
+        $(this).animate({ scrollTop: 0 });
     })
 
     let nom = new Typed(".accueil_nom", {
@@ -62,7 +61,7 @@ $(document).ready(function () {
         startDelay: 300,
         showCursor: false
     });
-        $(".accueil_notif").show(500);
+    $(".accueil_notif").show(500);
     window.setTimeout(masquernotification, 10000);
     // var now = new Date();
     // if (now.getHours() < 19) { document.getElementById("accueil_heure").innerHTML = "Bonjour" }
@@ -70,6 +69,6 @@ $(document).ready(function () {
     //     document.getElementById("accueil_heure").innerHTML = "Bonsoir"
     // }
 })
-function masquernotification(){
-   $(".accueil_notif").hide(500);
+function masquernotification() {
+    $(".accueil_notif").hide(400);
 }
