@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     $('#accueil_decouvrir').click(function () {
         $('#accueil').hide(100);
-        $(".portfolio").show(500);
+        $(".portfolio").show(300);
         var lebody = document.getElementById("body");
         lebody.style.overflow = "auto";
         $(this).animate({ scrollTop: 0 });
@@ -90,6 +90,6 @@ $(document).ready(function () {
     })
 
     $('#theme_bleu').click(function () {
-        document.documentElement.style.setProperty('--secondary-text', 'blue');
+        document.documentElement.style.setProperty('--secondary-text', 'rgb(0, 128, 255)');
     })
 })
