@@ -92,4 +92,9 @@ $(document).ready(function () {
     $('#theme_bleu').click(function () {
         document.documentElement.style.setProperty('--secondary-text', 'blue');
     })
+
+    $('#paramsicon').click(function () {
+        $('#paramsicon').toggleClass("fa-cog fa-chevron-right");
+        $('.parametre').toggleClass('open');
+    })
 })

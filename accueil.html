@@ -38,7 +38,6 @@
           <li><i class="fas fa-brain"></i></i><a href="#competence">Compétences</a></li>
           <li><i class="fas fa-sitemap"></i><a href="#portfolio">Portfolio</a></li>
           <li><i class="far fa-envelope"></i><a href="#contact">Contact</a></li>
-          <li id="params"><i class="fas fa-cog fa-spin"></i><a href="#parametre">Paramètres</a></li><i></i>
           <!-- <li><a href="img/Oursel_CV.pdf" class="btn">Voir mon CV</a></li> -->
         </ul>
         <div class="menu-btn">
@@ -46,7 +45,8 @@
         </div>
       </nav>
 
-      <div id="parametre" class="parametre" style="display: none;">
+      <div id="parametre" class="parametre">
+        <i id="paramsicon" class="fas fa-cog"></i>
         <div class="parametre_option">
           <p>Luminosité &nbsp;<i id="theme" class="far fa-lightbulb"></i></p>
           <p>Thème &nbsp;<i id="theme_rouge" class="fas fa-tint" style="color: red;"></i>
@@ -77,180 +77,182 @@
       </section>
 
       <section id="competence" class="competence">
-        <div class="section_title">
-          <h2>Mes compétences</h2>
-        </div>
-        <div class="contentcomp">
-          <div class="categorie">
-            <h4 class="title">Langages</h4>
-            <label class="item">HTML / CSS</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">PHP</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">C#</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">SQL</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">JavaScript</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Java</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Python</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Kotlin</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
-            <label class="item">Swift</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
-            <label class="item">VBA</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
+        <div class="competencebackground">
+          <div class="section_title">
+            <h2>Mes compétences</h2>
           </div>
-          <div class="categorie">
-            <h4 class="title">Frameworks</h4>
-            <label class="item">Angular JS</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+          <div class="contentcomp">
+            <div class="categorie">
+              <h4 class="title">Langages</h4>
+              <label class="item">HTML / CSS</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">PHP</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">C#</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">SQL</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">JavaScript</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Java</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Python</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Kotlin</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
+              </div>
+              <label class="item">Swift</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
+              </div>
+              <label class="item">VBA</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
               </div>
             </div>
-            <label class="item">Bootstrap</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+            <div class="categorie">
+              <h4 class="title">Frameworks</h4>
+              <label class="item">Angular JS</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Bootstrap</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">React JS</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
+              </div>
+              <label class="item">Node JS</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
+              </div>
+              <label class="item">JQuery</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
+              </div>
+              <label class="item">Laravel</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
               </div>
             </div>
-            <label class="item">React JS</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+            <div class="categorie">
+              <h4 class="title">IDE</h4>
+              <label class="item">Visual Studio</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">NetBeans</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Android Studio</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Xcode</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
               </div>
             </div>
-            <label class="item">Node JS</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+            <div class="categorie">
+              <h4 class="title">Autres</h4>
+              <label class="item">Pack office</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">Windows</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
+                </div>
+              </div>
+              <label class="item">Git</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">phpMyAdmin</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
+                </div>
+              </div>
+              <label class="item">Linux</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
+                </div>
               </div>
             </div>
-            <label class="item">JQuery</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
-            <label class="item">Laravel</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
+            <br>
           </div>
-          <div class="categorie">
-            <h4 class="title">IDE</h4>
-            <label class="item">Visual Studio</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">NetBeans</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Android Studio</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Xcode</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
+          <div class="legend">
+            <label style="color: lightcoral;">25% - moins d'un an d'expérience (quelques bases)</label><br>
+            <label style="color: khaki;">50% - un an d'expérience minimum (bases acquises)</label><br>
+            <label style="color: springgreen;">75% - Au moins deux années d'expérience (bonne maîtrise
+              générale)</label><br>
+            <label style="color: white">100% - Expert (très bonne maîtrise)</label>
           </div>
-          <div class="categorie">
-            <h4 class="title">Autres</h4>
-            <label class="item">Pack office</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">Windows</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%; font-weight: bold; font-size: medium;">75%
-              </div>
-            </div>
-            <label class="item">Git</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">phpMyAdmin</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 50%; font-weight: bold; font-size: medium;">50%
-              </div>
-            </div>
-            <label class="item">Linux</label>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                aria-valuemin="0" aria-valuemax="100" style="width: 25%; font-weight: bold; font-size: medium;">25%
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="legend">
-          <label style="color: lightcoral;">25% - moins d'un an d'expérience (quelques bases)</label><br>
-          <label style="color: khaki;">50% - un an d'expérience minimum (bases acquises)</label><br>
-          <label style="color: springgreen;">75% - Au moins deux années d'expérience (bonne maîtrise
-            générale)</label><br>
-          <label style="color: white">100% - Expert (très bonne maîtrise)</label>
         </div>
       </section>
       <div class="up">

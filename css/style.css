@@ -35,6 +35,7 @@ body {
 
 .section_title {
 	width: 100%;
+	padding-top: 10px;
 	text-align: center;
 }
 
@@ -304,22 +305,47 @@ nav ul li a {
 /********************************************************** PARAMÈTRE **********************************************************/
 .parametre {
 	position: fixed;
-	top: 12%;
-	right: 0px;
+	top: 13%;
+	right: -200px;
 	width: 200px;
 	height: 100px;
-	background: rgba(0, 0, 0, 0.6);
-	border: solid 1px var(--secondary-text);
+	background: var(--background-nav);
 	color: var(--main-text);
-	z-index: 1;
 	display: flex;
 	padding: 10px;
 	justify-content: space-between;
 	transition: var(--fondue);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	opacity: 0.9;
+	z-index: 1;
+}
+
+.parametre.open {
+	right: 0px;
+}
+
+#paramsicon {
+	color: var(--main-text);
+	font-size: x-large;
+	cursor: pointer;
+	transition: var(--fondue);
+}
+
+.parametre #paramsicon {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+	top: 0;
+	background: var(--background-nav);
+	position: absolute;
+	left: -30px;
+	transition: var(--fondue);
 }
 
 .parametre_option {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .parametre_option i {
@@ -334,6 +360,7 @@ nav ul li a {
 	width: 100%;
 	transition: var(--fondue);
 	background-color: var(--background-home);
+	background-attachment: fixed;
 }
 
 .profil_content {
@@ -372,15 +399,69 @@ nav ul li a {
 
 /*********************************************************** COMPÉTENCE **********************************************************/
 .competence {
-	padding: auto;
-	top: auto;
 	width: 100%;
-	transition: var(--fondue);
-	background-color: var(--background-home);
+	height: auto;
+	background-image: url(../img/fondtechno.png);
+	background-size: cover;
+	background-attachment: fixed;
 }
+
+.competencebackground {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contentcomp {
+	color: var(--main-text);
+	display: flex;
+	padding-top: 80px;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.categorie {
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 300px;
+	height: auto;
+	margin: 30px;
+	border-radius: 30px;
+	backdrop-filter: blur(5px);
+	box-shadow: rgba(14, 30, 37, 0.4) 0px 2px 4px 0px, rgba(14, 30, 37, 0.52) 0px 2px 16px 0px;
+}
+
+.categorie .title {
+	text-align: center;
+	color: var(--secondary-text);
+}
+
+.categorie .item {
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--main-text);
+	margin-top: 10px;
+}
+
+.legend {
+	float: left;
+	width: 100%;
+	background: black;
+	padding: 10px;
+}
+
 
 /*********************************************************** RESPONSIVE ***********************************************************/
 @media (max-width: 1030px) {
+	.section_title h2 {
+		width: auto;
+		padding: auto;
+		font-size: 10px;
+	}
+
+	.parametre {
+		display: none;
+	}
+
 	.nav {
 		position: fixed;
 		opacity: 1;
