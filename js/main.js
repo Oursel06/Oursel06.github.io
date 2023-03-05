@@ -199,7 +199,6 @@
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
-
   /**
    * Portfolio details lightbox 
    */
