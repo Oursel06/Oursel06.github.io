@@ -18,6 +18,7 @@
   <body>
     <!-- Menu burger version mobile -->
     <i class="bi bi-list mobile-nav-toggle d-lg-none" style="font-weight: bold; font-size: 40px;"></i>
+
     <!-- Header  -->
     <header id="header" class="d-flex flex-column justify-content-center">
       <nav id="navbar" class="navbar nav-menu">
@@ -60,9 +61,9 @@
             <div class="col-lg-8 pt-4 pt-lg-0 content">
               <p class="fst">
                 Je m'appelle Alexandre Oursel, j'ai 22 ans et je suis en troisième année d'étude en informatique
-                spécialité <strong>développement</strong> chez <strong>YNOV campus</strong> à Sophia Antipolis. <br />
-                J'effectue mon alternance chez TIMCI, entreprise de logiciel pour les agences immobilières située à Nice
-                en tant que développeur web et application mobile. <br />
+                spécialité <strong>dé veloppement</strong> chez <strong>YNOV campus</strong> à Sophia Antipolis. <br />
+                J'effectue mon alternance chez TIMCI, entreprise de logiciels pour les agences immobilières située à
+                Nice en tant que développeur web et application mobile. <br />
                 J'envisage de continuer mes études avec un master en programmation web afin de devenir développeur web
                 full stack (back / front) car c'est un domaine qui m'intéresse beaucoup.
               </p>
@@ -217,6 +218,7 @@
         </div>
       </section>
 
+      <!-- Portfolio -->
       <section id="portfolio" class="portfolio section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
@@ -304,9 +306,12 @@
                   <a href="https://github.com/CharlesDESC/challenge48h"><span class="technoprojet"><i
                         class="bx bxl-github"></i>
                       Github</span></a>
-                  <a href=""><span class="technoprojet"><i class="bi bi-plus"></i> Voir plus</span></a>
-                  <span> <i class="bi bi-clock"></i>
-                    < 48h</span>
+                  <a href="/img/challenge_accueil.png" data-gallery="challenge" class="portfolio-lightbox"><span
+                      class="technoprojet"><i class="bi bi-plus"></i> Voir plus</span></a>
+                  <a style="display: none;" href="/img/challenge_jeux.png" data-gallery="challenge"
+                    class="portfolio-lightbox"></a>
+                  <i class="bi bi-clock"></i>
+                  < 48h</span>
                 </div>
               </div>
             </div>
@@ -348,6 +353,46 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommandations -->
+      <section id="testimonials" class="testimonials section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Recommandations</h2>
+          </div>
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="/img/recommandation.png" class="testimonial-img" alt="">
+                  <h3>Marius Marciniak</h3>
+                  <h4>Développeur chez TIMCI</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <a
+                      href="https://www.linkedin.com/in/marius-marciniak-0ab37b12a/">https://www.linkedin.com/in/marius-marciniak-0ab37b12a/</a>
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="img/recommandation.png" class="testimonial-img" alt="">
+                  <h3>Jonathan Tordjman</h3>
+                  <h4>Chef de projet chez TIMCI</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    <a
+                      href="https://www.linkedin.com/in/jonathantordjman/">https://www.linkedin.com/in/jonathantordjman/</a>
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
